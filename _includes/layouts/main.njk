@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+        <meta charset="utf-8"/> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
+        <title>KEY JAY MUSIC</title>         
+        <meta name="author" content="Jamaal Ephriam"/> 
+        <meta name="description" content="The official website of musician, composer, and producer KEY JAY!"/> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+        <!-- Facebook Meta Tags -->         
+        <meta property="og:url" content="https://keyjaymusic.com"/> 
+        <meta property="og:title" content="KEY JAY MUSIC"/> 
+        <meta property="og:description" content="The official website of musician, composer, and producer KEY JAY!"/> 
+        <meta property="og:image" content="https://cdn.music.keyjayhd.com/public/img/social_1200.jpg"/> 
+        <!-- Twitter Meta Tags -->         
+        <meta name="twitter:card" content="summary_large_image"/> 
+        <meta property="twitter:domain" content="keyjaymusic.com"/> 
+        <meta property="twitter:url" content="https://keyjaymusic.com"/> 
+        <meta name="twitter:title" content="KEY JAY MUSIC"/> 
+        <meta name="twitter:description" content="The official website of musician, composer, and producer KEY JAY!"/> 
+        <meta name="twitter:image" content="https://cdn.music.keyjayhd.com/public/img/social_1200.jpg"/> 
+        <link href="src/css/theme.css" rel="stylesheet" type="text/css"/> 
+        <link href="src/css/style.css" rel="stylesheet"/> 
+        <link href="src/js/mp3-sticky-player/content/global.css" rel="stylesheet" type="text/css"/> 
+        <link href="src/js/tingle/tingle.css" rel="stylesheet"/> 
+        <script>/* Pinegrow Interactions, do not remove */ (function(){try{if(!document.documentElement.hasAttribute('data-pg-ia-disabled')) { window.pgia_small_mq=typeof pgia_small_mq=='string'?pgia_small_mq:'(max-width:767px)';window.pgia_large_mq=typeof pgia_large_mq=='string'?pgia_large_mq:'(min-width:768px)';var style = document.createElement('style');var pgcss='html:not(.pg-ia-no-preview) [data-pg-ia-hide=""] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show=""] {opacity:1;visibility:visible;display:block;}';if(document.documentElement.hasAttribute('data-pg-id') && document.documentElement.hasAttribute('data-pg-mobile')) {pgia_small_mq='(min-width:0)';pgia_large_mq='(min-width:99999px)'} pgcss+='@media ' + pgia_small_mq + '{ html:not(.pg-ia-no-preview) [data-pg-ia-hide="mobile"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="mobile"] {opacity:1;visibility:visible;display:block;}}';pgcss+='@media ' + pgia_large_mq + '{html:not(.pg-ia-no-preview) [data-pg-ia-hide="desktop"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="desktop"] {opacity:1;visibility:visible;display:block;}}';style.innerHTML=pgcss;document.querySelector('head').appendChild(style);}}catch(e){console&&console.log(e);}})()</script>         
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap"/>
+        <link rel="icon" href="src/img/kj_logo_icon.svg" type="image/svg+xml"/>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28427384-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-28427384-1');
+        </script>
+
+</head>
+<body>
+    {% include 'partials/_header.html' %}
+    {{ content | safe }}
+    {% include 'partials/_footer.html' %}
+        
+        <script src="https://use.fontawesome.com/releases/v5.13.1/js/all.js"></script>         
+        
+        <!-- REQUIRES LOCAL HOSTING --> 
+        <script src="src/js/mp3-sticky-player/java/FWDMSP.js" type="text/javascript" defer></script>        
+        <script src="src/js/mp3-sticky-player/player_settings.js" defer></script>          
+        <script src="src/js/waypoints/noframework.waypoints.min.js"></script>
+        <script src="src/js/handlebars/handlebars.min-v4.7.7.js"></script>         
+        <!-- <script src="src/js/tingle/tingle.js"></script> -->                 
+        <!-- <script src="src/js/mixitup3/mixitup.min.js"></script> -->         
+        <!-- <script src="src/js/vlazyload/lazyload.min.js"></script> -->
+        
+        
+        <script src="src/js/pgia/lib/pgia.js"></script>
+        <script src="src/js/typingtext/tt.js"></script>            
+        <script type="module" src="src/js/music_db/kjmdb.js"></script>                        
+        <script type="module" src="/src/js/module.js"></script> 
+        <script src="/main.js"></script>
+           
+</body>     
+</html>

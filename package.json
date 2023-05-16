@@ -1,0 +1,35 @@
+{
+  "name": "kjmusic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "run-s clean",
+    "start": "run-p *:dev",
+    "prebuild": "run-s clean",
+    "build": "run-s eleventy:build vite:build",
+    "clean": "run-s clean:files clean:empty",
+    "clean:files": "del-cli '_site/**/*.html' public",
+    "clean:empty": "delete-empty _site/",
+    "eleventy:dev": "eleventy --watch",
+    "eleventy:build": "eleventy",
+    "vite:dev": "vite",
+    "vite:build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.2-alpha.2",
+    "del-cli": "^5.0.0",
+    "delete-empty": "^3.0.0",
+    "fast-glob": "^3.2.12",
+    "npm-run-all": "^4.1.5",
+    "vite": "^4.3.5"
+  },
+  "dependencies": {
+    "mixitup": "^3.3.1",
+    "tingle.js": "^0.16.0",
+    "vanilla-lazyload": "^17.8.3"
+  }
+}

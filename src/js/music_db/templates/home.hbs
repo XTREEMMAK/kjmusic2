@@ -1,0 +1,9 @@
+{{#with data}}
+{{#each this}}
+<a href="javascript:void(0)" onclick="mixLink('{{attributes.slug}}')"  class="mix {{#each attributes.mp_categories}}{{#each this}}{{attributes.type}} {{/each}}
+{{/each}}">
+<img class="miximg" src="{{#with attributes.frontCover}}{{#each this}}{{#each this}}{{formats.medium.url}}{{/each}}{{/each}}{{/with}}
+" loading="lazy" width="300" height="300" alt="{{this.[0].attributes.name}}"/>
+</a>
+{{/each}}
+{{/with}}

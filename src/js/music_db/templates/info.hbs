@@ -1,0 +1,38 @@
+{{#with data}}
+{{#each this}} 
+<div id="rc_contain" class="record_wrapper">
+    <div class="ri_cover">
+        <img src="{{#with attributes.frontCover}}{{#each this}}{{#each this}}{{formats.medium.url}}{{/each}}{{/each}}{{/with}}" 
+        loading="lazy"/>
+    </div>
+    <div class="ri_main_details">
+                        <div class="ri_title"><h2>{{attributes.title}}</h2></div>
+                        <div class="ri_artist"><h3>By: {{attributes.mainArtist}}</h3></div>
+                        <div class="ri_addcredits"><h4>{{attributes.supportingArtists}}</h4></div>
+                        <div class="ri_release"><h6>Released: {{attributes.releaseDate}}</h6></div>
+        <div class="ri_platforms">
+        {{#each attributes.distribution}}
+         <a href="{{distributorsProjectURL}}" target="_blank"><i class="{{iconClass}}"></i></a>
+        {{/each}}
+        </div>
+    </div>
+    <div class="ri_extended_details">
+        <div class="ri_description">
+            <h3>Description:</h3>
+            {{{attributes.description}}}</div>
+        <div class="ri_involvement">
+            <h3>Project Involvement:</h3>
+            {{{attributes.projectInvolvement}}}</div>
+        <div class="ri_credits">
+            <h3>Credits:</h3>
+            <div id="credits_table" class="grid-container">
+            {{#each attributes.credits}}
+                <div class="grid-row-wrapper"><div class="grid-item">{{name}}</div><div class="grid-item">{{role}}</div></div>
+                <div class="grid-item"></div><div class="grid-item"></div>
+            {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+{{/each}}
+{{/with}}

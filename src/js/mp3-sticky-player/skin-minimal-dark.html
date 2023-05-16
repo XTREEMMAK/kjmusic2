@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>MP3 Sticky Player</title>
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1 user-scalable=no" />
+		
+		<!--  Import required css and js files  -->
+		<link rel="stylesheet" type="text/css"  href="content/global.css"/>
+		<script type="text/javascript" src="java/FWDMSP.js"></script>
+			
+		<!-- Setup audio player-->
+		<script type="text/javascript">
+			FWDMSPUtils.onReady(function(){
+				new FWDMSP({
+					//main settings
+					instanceName:"player1",
+					playlistsId:"playlists",
+					mainFolderPath:"content",
+					skinPath:"minimal_skin_dark",
+					privatePassword:"428c841430ea18a70f7b06525d4b748a",
+					soundCloudAPIKey:"",
+					showSoundCloudUserNameInTitle:"yes",
+					googleAnalyticsTrackingCode:"UA-122352201-1",
+					youtubeAPIKey:"",
+					proxyCors:"",
+					showMainBackground:"yes",
+					verticalPosition:"bottom",
+					horizontalPosition:"center",
+					useDeepLinking:"yes",
+					useYoutube:"yes",
+					useVideo:"yes",
+					useVectorIcons:'no',
+					useContinuousPlayback:'no',
+					useHEXColorsForSkin:"no",
+					normalHEXButtonsColor:"#FF0000",
+					normalHEXButtonsColor2:"#00FF00",
+					rightClickContextMenu:"developer",
+					showButtonsToolTips:"yes",
+					animate:"yes",
+					addKeyboardSupport:"yes",
+					autoPlay:"no",
+					loop:"no",
+					shuffle:"no",
+					maxWidth:850,
+					volume:.8,
+					toolTipsButtonsHideDelay:1.5,
+					toolTipsButtonsBackgroundColor:"#FFFFFF",
+					toolTipsButtonFontColor:"#000000",
+					//controller settings
+					showControllerByDefault:"yes",
+					showThumbnail:"yes",
+					showFullScreenButton:"yes",
+					showNextAndPrevButtons:"yes",
+					showLoopButton:"yes",
+					showShuffleButton:"yes",
+					showDownloadMp3Button:"yes",
+					showBuyButton:"yes",
+					showShareButton:"yes",
+					showMainScrubberAndVolumeScrubberToolTipLabel:"yes",
+					expandBackground:"no",
+					titleColor:"#FFFFFF",
+					timeColor:"#888888",
+					scrubbersToolTipLabelBackgroundColor:"#FFFFFF",
+					scrubbersToolTipLabelFontColor:"#5a5a5a",
+					//controller align and size settings (described in detail in the documentation!)
+					controllerHeight:76,
+					startSpaceBetweenButtons:9,
+					spaceBetweenButtons:8,
+					separatorOffsetOutSpace:5,
+					separatorOffsetInSpace:9,
+					lastButtonsOffsetTop:14,
+					allButtonsOffsetTopAndBottom:14,
+					titleBarOffsetTop:13,
+					mainScrubberOffsetTop:47,
+					spaceBetweenMainScrubberAndTime:10,
+					startTimeSpace:10,
+					scrubbersOffsetWidth:2,
+					scrubbersOffestTotalWidth:0,
+					volumeButtonAndScrubberOffsetTop:47,
+					spaceBetweenVolumeButtonAndScrubber:6,
+					volumeScrubberOffestWidth:4,
+					scrubberOffsetBottom:10,
+					equlizerOffsetLeft:1,
+					//playlists window settings
+					showPlaylistsSearchInput:"yes",
+					usePlaylistsSelectBox:"yes",
+					showPlaylistsSelectBoxNumbers:"yes",
+					showPlaylistsButtonAndPlaylists:"yes",
+					showPlaylistsByDefault:"no",
+					useID3ForFolderPlaylist:"yes",
+					thumbnailSelectedType:"opacity",
+					playlistSort:"ascending",
+					startAtPlaylist:0,
+					startAtTrack:0,
+					startAtRandomTrack:"no",
+					playlistSelectorHeight: 37,
+					buttonsMargins:15,
+					thumbnailMaxWidth:330, 
+					thumbnailMaxHeight:330,
+					horizontalSpaceBetweenThumbnails:40,
+					verticalSpaceBetweenThumbnails:40,
+					mainSelectorBackgroundSelectedColor:"#FFFFFF",
+					mainSelectorTextNormalColor:"#FFFFFF",
+					mainSelectorTextSelectedColor:"#000000",
+					mainButtonTextNormalColor:"#888888",
+					mainButtonTextSelectedColor:"#FFFFFF",
+					//playlist settings
+					playTrackAfterPlaylistLoad:"no",
+					showPlayListButtonAndPlaylist:"yes",
+					showPlayListOnMobile:"yes",
+					showPlayListByDefault:"no",
+					showPlaylistItemPlayButton:"yes",
+					showPlaylistItemDownloadButton:"yes",
+					showPlaylistItemBuyButton:"yes",
+					forceDisableDownloadButtonForPodcast:"yes",
+					forceDisableDownloadButtonForOfficialFM:"yes",
+					forceDisableDownloadButtonForFolder:"yes",
+					addScrollBarMouseWheelSupport:"yes",
+					showTracksNumbers:"yes",
+					disableScrubber:"no",
+					randomizePlaylist:"no",
+					playlistBackgroundColor:"#000000",
+					trackTitleNormalColor:"#888888",
+					trackTitleSelectedColor:"#FFFFFF",
+					trackDurationColor:"#888888",
+					playlistItemHeight:33,
+					maxPlaylistItems:100,
+					nrOfVisiblePlaylistItems:9,
+					trackTitleOffsetLeft:0,
+					playPauseButtonOffsetLeftAndRight:11,
+					durationOffsetRight:9,
+					downloadButtonOffsetRight:11,
+					scrollbarOffestWidth:7,
+					//playback rate / speed
+					showPlaybackRateButton:"yes",
+					playbackRateButtonsMargins:7,
+					defaultPlaybackRate:1, //min - 0.5 / max - 3
+					playbackRateWindowTextColor:"#FFFFFF",
+					//visualizer
+					useVisualizer:'yes',
+					visualizerRandomPreset:"yes",
+					visualizerPreset:"wave1",
+					visualizerColor:["#AAAAAA", "#999999", "#888888", "#777777", "#666666"],
+					visualizerCapColor: "#FFFFFF",
+					//login
+					playIfLoggedIn:"no",
+                    playIfLoggedInMessage:"Please <a href='https://google.com' target='_blank'>login</a> to access this track.",
+					//search bar settings
+					showSearchBar:"yes",
+					showSortButtons:"yes",
+					searchInputColor:"#999999",
+					searchBarHeight:38,
+					inputSearchTextOffsetTop:1,
+					inputSearchOffsetLeft:0,
+					//password window
+					borderColor:"#333333",
+					mainLabelsColor:"#FFFFFF",
+					secondaryLabelsColor:"#a1a1a1",
+					textColor:"#5a5a5a",
+					inputBackgroundColor:"#000000",
+					inputColor:"#FFFFFF",
+					//opener settings
+					showOpener:"yes",
+					openerAlignment:"right",
+					openerEqulizerOffsetLeft:3,
+					openerEqulizerOffsetTop:-1,
+					//popup settings
+					showPopupButton:"yes",
+					openPopupOnPlay:"no",
+					popupWindowBackgroundColor:"#878787",
+					popupWindowWidth:850,
+					popupWindowHeight:451,
+					//a to b loop
+					atbTimeTextColorNormal:"#888888",
+					atbTimeTextColorSelected:"#FFFFFF",
+					atbButtonTextNormalColor:"#888888",
+					atbButtonTextSelectedColor:"#FFFFFF",
+					atbButtonBackgroundNormalColor:"#FFFFFF",
+					atbButtonBackgroundSelectedColor:"#000000"
+				});
+			});
+			
+			function buyCustomFunction(){
+				alert("The buy button can open a custom link or a custom javascript function.");
+			}
+		</script>
+	</head>
+
+	<body style="background-color:#555555;">
+		
+		<!-- Playlists -->
+		<ul id="playlists" style="display:none;">
+			<li data-source="playlist1" data-playlist-name="MY HTML PLAYLIST 1"  data-thumbnail-path="content/thumbnails/large1.jpg">
+				<p class="fwdmsp-categories-title"><span class="fwdmsp-header">Title: </span><span class="fwdmsp-title">My HTML Playlist 1</span></p>
+				<p class="fwdmsp-categories-type"><span class="fwdmsp-header">Type: </span>HTML</p>
+				<p class="fwdmsp-categories-description"><span class="fwdmsp-header">Description: </span>Created using <strong>HTML markup</strong>, all formats are supported and it can have mixed audio & video.</p>
+			</li>
+			
+			<li data-source="https://www.webdesign-flash.ro/p/rap/podcast/podcast.xml" data-playlist-name="MY PODCAST PLAYLIST 1"  data-thumbnail-path="content/thumbnails/p-podcast.jpg">
+				<p class="fwdmsp-categories-title"><span class="fwdmsp-header">Title: </span><span class="fwdmsp-title">My Podcast Playlist 1</span></p>
+				<p class="fwdmsp-categories-type"><span class="fwdmsp-header">Type: </span>PODCAST</p>
+				<p class="fwdmsp-categories-description"><span class="fwdmsp-header">Description: </span>This playlist is created using a podcast URL.</p>
+			</li>
+			
+			<li data-source="https://soundcloud.com/playlist/sets/chance-the-rapper-top-tracks" data-playlist-name="MY SOUNDCLOUD PLAYLIST 1"  data-thumbnail-path="content/thumbnails/p-soundcloud.jpg">
+				<p class="fwdmsp-categories-title"><span class="fwdmsp-header">Title: </span><span class="fwdmsp-title">My SoundCloud Playlist 1</span></p>
+				<p class="fwdmsp-categories-type"><span class="fwdmsp-header">Type: </span>SOUNDCLOUD</p>
+				<p class="fwdmsp-categories-description"><span class="fwdmsp-header">Description: </span>This playlist is created using a SoundCloud playlist URL.</p>
+			</li>
+
+			<li data-source="playlistMixed" data-playlist-name="MY MIXED PLAYLIST 1"  data-thumbnail-path="content/thumbnails/p-mixed.jpg">
+				<p class="fwdmsp-categories-title"><span class="fwdmsp-header">Title: </span><span class="fwdmsp-title">My Mixed Playlist 1</span></p>
+				<p class="fwdmsp-categories-type"><span class="fwdmsp-header">Type: </span>MIXED</p>
+				<p class="fwdmsp-categories-description"><span class="fwdmsp-header">Description: </span>This playlist contains mixed files like .mp3, .mp4, Youtube, SoundCloud, Shoutcast, HLS etc ...</p>
+			</li>
+
+			<li data-source="https://www.webdesign-flash.ro/p/rap/content/playlist1.xml" data-playlist-name="MY XML PLAYLIST 1"  data-thumbnail-path="content/thumbnails/p-xml.jpg">
+				<p class="fwdmsp-categories-title"><span class="fwdmsp-header">Title: </span><span class="fwdmsp-title">My XML Playlist 1</span></p>
+				<p class="fwdmsp-categories-type"><span class="fwdmsp-header">Type: </span>XML</p>
+				<p class="fwdmsp-categories-description"><span class="fwdmsp-header">Description: </span>This playlist is created using a XML file.</p>
+			</li>
+
+			<li data-source="list=PLxKHVMqMZqUQFbRO0VWaHMaWuQagIgpJe" data-playlist-name="MY YOUTUBE PLAYLIST 1"  data-thumbnail-path="content/thumbnails/p-youtube.jpg">
+				<p class="fwdmsp-categories-title"><span class="fwdmsp-header">Title: </span><span class="fwdmsp-title">My Youtube Playlist 1</span></p>
+				<p class="fwdmsp-categories-type"><span class="fwdmsp-header">Type: </span>YOUTUBE</p>
+				<p class="fwdmsp-categories-description"><span class="fwdmsp-header">Description: </span>This playlist is created using a Youtube playlist URL.</p>
+			</li>
+
+			<li data-source="mp4Playlist" data-playlist-name="MY VIDEO .mp4 FOLDER PLAYLIST 1"  data-thumbnail-path="content/thumbnails/p-folder.jpg">
+				<p class="fwdmsp-categories-title"><span class="fwdmsp-header">Title: </span><span class="fwdmsp-title">My Video .mp4 Playlist 1</span></p>
+				<p class="fwdmsp-categories-type"><span class="fwdmsp-header">Type: </span>VIDEO .mp4 FOLDER</p>
+				<p class="fwdmsp-categories-description"><span class="fwdmsp-header">Description: </span>This playlist contains .mp4 videos and simple HTML markup.</p>
+			</li>
+
+			<li data-source="folder:mp3" data-playlist-name="MY AUDIO .mp3 FOLDER PLAYLIST 1"  data-thumbnail-path="content/thumbnails/p-folder.jpg">
+				<p class="fwdmsp-categories-title"><span class="fwdmsp-header">Title: </span><span class="fwdmsp-title">My Folder Playlist 1</span></p>
+				<p class="fwdmsp-categories-type"><span class="fwdmsp-header">Type: </span>AUDIO .mp3 FOLDER</p>
+				<p class="fwdmsp-categories-description"><span class="fwdmsp-header">Description: </span>This playlist is created from a folder with mp3 files.</p>
+			</li>
+
+		</ul>
+
+		<!-- HTML playlist -->
+		<ul id="playlist1" style="display:none;">
+			<li data-path="content/mp3/01.mp3" data-thumbpath="content/thumbnails/small1.jpg" data-duration="06:16">
+				<p><span class="fwdmsp-artist">Yellow Claw & Tropkillaz</span><span class="fwdmsp-title"> - Assets feat. The Kemist</span></p>
+			</li>
+			<li data-path="content/mp3/02.mp3" data-thumbpath="content/thumbnails/small2.jpg" data-downloadable="yes" data-buy-url="http://webdesign-flash.ro/p/uvp/" data-duration="04:41">
+				<p><span span class="fwdmsp-artist">MACKLEMORE & RYAN LEWIS vs MAJOR LAZER</span><span class="fwdmsp-title"> - can't hold us remix (ft swappi and 1st klase)</span></p>
+			</li>
+			<li data-path="content/mp3/03.mp3" data-thumbpath="content/thumbnails/small3.jpg" data-downloadable="no" data-duration="03:49">
+				<p><span span class="fwdmsp-artist">Crush ft. Camden Cox</span><span class="fwdmsp-title"> - Could This Be Real (Luminox Remix)</span></p>
+			</li>
+			<li data-path="content/mp3/04.mp3" data-thumbpath="content/thumbnails/small4.jpg" data-buy-url="buyCustomFunction();" data-duration="04:19">
+				<p><span class="fwdmsp-artist">DJ SLiiNK X DiRTY SOUTH JOE</span><span class="fwdmsp-title"> - CERTiFiED TRAP TOUR OFFiCiAL MiX</span></p>
+			</li>
+			<li data-path="content/mp3/05.mp3" data-thumbpath="content/thumbnails/small5.jpg" data-use-a-to-b="yes" data-downloadable="no" data-duration="03:54">
+				<p><span class="fwdmsp-artist">Knife Party</span><span class="fwdmsp-title"> - LRAD (CRNKN FESTIE RMX) - <span class="white" style="font-weight:bold; color:#FFFFFF">A to B loop</span></span></p>
+			</li>
+			<li data-path="content/mp3/06.mp3" data-thumbpath="content/thumbnails/small6.jpg" data-downloadable="no" data-duration="02:01">
+				<p><span class="fwdmsp-artist">Sandro Silva & Quintino</span><span class="fwdmsp-title"> - Epic (Carnage & Luminox Festival Trap Refix)</span></p>
+			</li>
+			<li data-path="content/mp3/07.mp3" data-thumbpath="content/thumbnails/small7.jpg" data-downloadable="yes" data-play-if-logged-in="yes" data-buy-url="buyCustomFunction();" data-duration="02:33">
+				<p><span class="fwdmsp-artist">New World Sound & Thomas Newson</span><span class="fwdmsp-title"> - Flute - <span class="white" style="font-weight:bold; color:#FFFFFF">Must be logged in!</span></span></p>
+			</li>
+			<li data-path="content/mp3/08.mp3" data-thumbpath="content/thumbnails/small8.jpg" data-downloadable="yes" data-buy-url="http://webdesign-flash.ro/p/s3dcov/" data-duration="02:41">
+				<p><span class="fwdmsp-artist">Sick Individuals & Axwell ft. Taylr Renee</span><span class="fwdmsp-title"> - I AM (Jacob Plant Remix)</span></p>
+			</li>
+			<li data-path="content/mp3/09.mp3" data-thumbpath="content/thumbnails/small9.jpg" data-downloadable="no" data-duration="02:36">
+				<p><span class="fwdmsp-artist">Morgan Page vs. Deorro</span><span class="fwdmsp-title"> - "Carry Yee" (Morgan Page Bootleg Remix)</span></p>
+			</li>
+			<li data-path="content/mp3/10.mp3" data-thumbpath="content/thumbnails/small10.jpg" data-downloadable="no" data-buy-url="buyCustomFunction();" data-duration="03:15">
+				<p><span class="fwdmsp-artist">Helicopter Showdown & Kezwik ft. La Meduza</span><span class="fwdmsp-title"> - No Return</span></p>
+			</li>
+			<li data-path="content/mp3/11.mp3" data-thumbpath="content/thumbnails/small11.jpg" data-downloadable="no"  data-duration="02:53">
+				<p><span class="fwdmsp-artist">Faithless vs. Danny Avila vs. Justice</span><span class="fwdmsp-title"> - We Are Poseidon Insomnia (MAKJ Vs. VINAI Edit)</span></p>
+			</li>
+			<li data-path="content/mp3/12.mp3" data-thumbpath="content/thumbnails/small12.jpg" data-downloadable="yes" data-duration="00:35">
+				<p><span class="fwdmsp-artist">Headhunterz ft. Krewella</span><span class="fwdmsp-title"> - United Kids Of The World (Project 46 Remix)</span></p>
+			</li>
+			<li data-path="content/mp3/13.mp3" data-thumbpath="content/thumbnails/small13.jpg" data-downloadable="yes" data-duration="00:31">
+				<p><span class="fwdmsp-artist">SVT116 – Niconé feat. Malonda</span><span class="fwdmsp-title"> - Let Love Begin (Acapella)</span></p>
+			</li>
+			<li data-path="content/mp3/14.mp3" data-thumbpath="content/thumbnails/small14.jpg" data-downloadable="yes" data-buy-url="http://webdesign-flash.ro/p/u3dcar/"  data-duration="01:14">
+				<p><span class="fwdmsp-artist">Terravita & Casey Desmond</span><span class="fwdmsp-title"> - Settle The Score (Case & Point Remix)</span></p>
+			</li>
+			<li data-path="content/mp3/15.mp3" data-thumbpath="content/thumbnails/small15.jpg" data-downloadable="yes" data-duration="03:20">
+				<p><span class="fwdmsp-artist">The Prototypes 'Chronicles' Mix</span><span class="fwdmsp-title"> - Recorded Exclusively for EDM.COM</span></p>
+			</li>
+			<li data-path="content/mp3/16.mp3" data-thumbpath="content/thumbnails/small16.jpg" data-downloadable="yes" data-duration="00:20">
+				<p><span class="fwdmsp-artist">Bass Kleph, Chris Arnott, Tommy Trash</span><span class="fwdmsp-title"> - We Feel Love (Daleri Bootleg)</span></p>
+			</li>
+			<li data-path="content/mp3/07.mp3" data-thumbpath="content/thumbnails/small17.jpg" data-downloadable="no" data-duration="02:33">
+				<p><span class="fwdmsp-artist">Alina Baraz & Galimatias</span><span class="fwdmsp-title"> - Pretty Thoughts</span></p>
+			</li>
+			<li data-path="content/mp3/08.mp3" data-thumbpath="content/thumbnails/small18.jpg" data-downloadable="no" data-duration="02:41">
+				<p><span class="fwdmsp-artist">Der Rauber Und Der Prinz</span><span class="fwdmsp-title"> - Jagd Auf Den Hirsch (Guti remix) DESOLAT 2010</span></p>
+			</li>
+			<li data-path="content/mp3/09.mp3" data-thumbpath="content/thumbnails/small19.jpg" data-downloadable="no" data-duration="02:36">
+				<p><span class="fwdmsp-artist">Great Good Fine Ok</span><span class="fwdmsp-title"> - You're The One For Me (option4 remix)</span></p>
+			</li>
+			<li data-path="content/mp3/10.mp3" data-thumbpath="content/thumbnails/small20.jpg" data-downloadable="yes" data-buy-url="buyCustomFunction();" data-duration="03:15" data-is-private="yes">
+				<p><span class="white" style="font-weight:bold;color:#FFFFFF;">Private video</span><span class="fwdmsp-title"> - Please enter password to play track, test password is <span class="white" style="font-weight:bold;color:#FFFFFF;">Melinda</span></span></p>
+			</li>
+			<li data-path="https://radiom2o-lh.akamaihd.net/i/RadioM2o_Live_1@42518/master.m3u8" data-thumbpath="content/thumbnails/small21.jpg" data-downloadable="no" data-duration="00:00">
+				<p><span class="white "style="font-weight:bold; color:#FFFFFF;">HLS live streaming .m3u8</span><span class="fwdmsp-title"> - http://radiom2o-lh.akamaihd.net/i/RadioM2o_Live_1@42518/master.m3u8</span></p>
+			</li>
+			<li data-path="http://144.217.158.181:80" data-type="shoutcast" data-thumbpath="content/thumbnails/small21.jpg" data-downloadable="no" data-duration="00:00">
+				<p><span class="white" style="font-weight:bold; color:#FFFFFF;">Shoutcast example</span><span class="fwdmsp-title"> - http://144.217.158.181:80</span></p>
+			</li>
+		</ul>		
+		
+		<!-- Mp4 playlist -->
+		<ul id="mp4Playlist" style="display:none;">
+			<li data-path="content/videos/fwd.mp4" data-video-poster-path="content/thumbnails/video-poster.jpg"  data-video-poster-path="content/thumbnails/video-poster.jpg" data-downloadable="yes" data-buy-url="http://webdesign-flash.ro/p/uvp/" data-duration="01:07">
+				<p><span style="font-weight:bold; color:#E78E09;">MP4</span> - MACKLEMORE & RYAN LEWIS vs MAJOR LAZER  can't hold us remix (ft swappi and 1st klase)</p>
+			</li>
+			<li data-path="content/videos/360.mp4" data-video-poster-path="content/thumbnails/video-poster.jpg" data-duration="01:21">
+				<p><span style="font-weight:bold; color:#f70c3e;">MP4</span> - Liviu Teodorescu & Dorian Popa feat. Laura Giurcanu - Fanele | Videoclip Oficial</p>
+			</li>
+			<li data-path="content/videos/evp.mp4" data-video-poster-path="content/thumbnails/video-poster.jpg" data-duration="01:04">
+				<p><span style="font-weight:bold; color:#dbc300;">MP4</span> - Swedish House Mafia - Swedish House Mafia | BBC Radio 1 Essential Mix</p>
+			</li>
+			<li data-path="content/videos/grid.mp4" data-video-poster-path="content/thumbnails/video-poster.jpg" data-downloadable="yes" data-buy-url="http://webdesign-flash.ro/p/uvp/" data-duration="00:53">
+				<p><span style="font-weight:bold; color:#48DF13;">MP4</span> - MACKLEMORE & RYAN LEWIS vs MAJOR LAZER -  can't hold us remix (ft swappi and 1st klase)</p>
+			</li>
+			<li data-path="content/videos/mgz.mp4" data-video-poster-path="content/thumbnails/video-poster.jpg" data-duration="01:15">
+				<p><span style="font-weight:bold; color:#0099ff;">MP4</span> - Akcent feat. Amira - Gold (Official Video)</p>
+			</li>
+			
+			<li data-path="content/videos/mlp.mp4" data-video-poster-path="content/thumbnails/video-poster.jpg" data-duration="00:51">
+				<p><span style="font-weight:bold; color:#E78E09;">MP4</span> - Brian's House Brian's House #10: Your Dad's A Star. You Suck.</p>
+			</li>
+			<li data-path="content/videos/r3dcar.mp4" data-video-poster-path="content/thumbnails/video-poster.jpg"  data-duration="00:41">
+				<p><span style="font-weight:bold; color:#f70c3e;">MP4</span> - DJ SLiiNK X DiRTY SOUTH JOE - CERTiFiED TRAP TOUR OFFiCiAL MiX</p>
+			</li>
+			<li data-path="content/videos/r3dcov.mp4" data-video-poster-path="content/thumbnails/video-poster.jpg" data-duration="00:57">
+				<p><span style="font-weight:bold; color:#48DF13;">MP4</span> - RUBY feat. UZZI - Nu caut iubiri (by Carla's Dreams)</p>
+			</li>
+			<li data-path="content/videos/rap.mp4" data-video-poster-path="content/thumbnails/video-poster.jpg" data-duration="01:12">
+				<p><span style="font-weight:bold; color:#0099ff;">MP4</span> - OctoberLUV Trey Songz - Play House</p>
+			</li>
+			<li data-path="content/videos/rdm.mp4" data-video-poster-path="content/thumbnails/video-poster.jpg" data-downloadable="yes"  data-duration="01:22">
+				<p><span style="font-weight:bold; color:#E78E09;">MP4</span> - Knife Party</span> - LRAD (CRNKN FESTIE RMX)</p>
+			</li>
+			<li data-path="content/videos/s3dcov.mp4" data-video-poster-path="content/thumbnails/video-poster.jpg" data-duration="01:32">
+				<p><span style="font-weight:bold; color:#f70c3e;">MP4</span> - Amira - Mai stai feat. DiezZ (Official Video)</p>
+			</li>
+			<li data-path="content/videos/u3dcar.mp4" data-video-poster-path="content/thumbnails/video-poster.jpg" data-duration="01:00">
+				<p><span style="font-weight:bold; color:#dbc300;">MP4</span> - Nirvana - Girls (Dj Dima House & Samsonoff Remix).</p>
+			</li>
+		</ul>
+		
+		<!-- HTML mixed playlist -->
+		<ul id="playlistMixed" style="display:none;">
+			<li data-path="content/mp3/01.mp3" data-thumbpath="content/thumbnails/small1.jpg" data-downloadable="yes" data-buy-url="http://webdesign-flash.ro/p/uvp/" data-duration="06:16">
+				<p><span class="fwdmsp-artist" style="font-weight:bold; color:#E78E09;">MP3</span><span class="fwdmsp-title"> - MACKLEMORE & RYAN LEWIS vs MAJOR LAZER  can't hold us remix (ft swappi and 1st klase)</span></p>
+			</li>
+			<li data-path="https://www.youtube.com/watch?v=GJjCfF0nlIg" data-thumbpath="" data-duration="03:32">
+				<p><span class="fwdmsp-artist" style="font-weight:bold; color:#f70c3e;">YOUTUBE</span><span class="fwdmsp-title"> - Liviu Teodorescu & Dorian Popa feat. Laura Giurcanu - Fanele | Videoclip Oficial</span></p>
+			</li>
+			<li data-path="https://soundcloud.com/classyton/ren-dominoes-nexeri-remix" data-thumbpath="content/thumbnails/swedish.jpg" data-duration="04:59">
+				<p><span class="fwdmsp-artist" style="font-weight:bold; color:#dbc300;">SOUNDCLOUD</span><span class="fwdmsp-title"> - Swedish House Mafia - Swedish House Mafia | BBC Radio 1 Essential Mix</span></p>
+			</li>
+			<li data-path="content/videos/fwd.mp4" data-thumbpath="content/thumbnails/nirvana.jpg" data-duration="01:07">
+				<p><span class="fwdmsp-artist" style="font-weight:bold; color:#48DF13;">MP4</span><span class="fwdmsp-title"> - Nirvana - Girls (Dj Dima House & Samsonoff Remix).</span></p>
+			</li>
+			<li data-path="https://radiom2o-lh.akamaihd.net/i/RadioM2o_Live_1@42518/master.m3u8" data-thumbpath="content/thumbnails/small21.jpg" data-downloadable="no" data-duration="00:00">
+				<p><span class="fwdmsp-artist" style="font-weight:bold; color:#0099ff;">HLS / LIVE STREAMING / m3u8</span><span class="fwdmsp-title"> - http://radiom2o-lh.akamaihd.net/i/RadioM2o_Live_1@42518/master.m3u8</span></p>
+			</li>
+			<li data-path="http://144.217.158.181:80" data-type="shoutcast" data-thumbpath="content/thumbnails/small21.jpg" data-downloadable="no" data-duration="00:00">
+				<p><span class="white" style="font-weight:bold; color:#FFFFFF;">SHOUTCAST EXAMPLE</span><span class="fwdmsp-title"> - http://144.217.158.181:80</span></p>
+			</li>
+			<li data-path="content/mp3/02.mp3" data-thumbpath="content/thumbnails/small2.jpg" data-downloadable="yes" data-buy-url="http://webdesign-flash.ro/p/uvp/" data-duration="04:41">
+				<p><span class="fwdmsp-artist" style="font-weight:bold; color:#f70c3e;">MP3</span><span class="fwdmsp-title"> - MACKLEMORE & RYAN LEWIS vs MAJOR LAZER -  can't hold us remix (ft swappi and 1st klase)</span></p>
+			</li>
+			<li data-path="https://www.youtube.com/watch?v=3-jmDVwq9Qc" data-thumbpath="" data-duration="03:46">
+				<p><span class="fwdmsp-artist" style="font-weight:bold; color:#dbc300;">YOUTUBE</span><span class="fwdmsp-title"> - Akcent feat. Amira - Gold (Official Video)</span></p>
+			</li>
+			<li data-path="https://soundcloud.com/brians-house-1/brians-house-10-your-dads-a" data-thumbpath="content/thumbnails/brian.jpg" data-duration="08:51">
+				<p><span class="fwdmsp-artist" style="font-weight:bold; color:#48DF13;">SOUNDCLOUD</span><span class="fwdmsp-title"> - Brian's House Brian's House #10: Your Dad's A Star. You Suck.</span></p>
+			</li>
+			<li data-path="content/videos/fwd.mp4" data-thumbpath="" data-duration="01:07">
+				<p><span class="fwdmsp-artist" style="font-weight:bold; color:#0099ff;">MP4</span><span class="fwdmsp-title"> - Amira - Mai stai feat. DiezZ (Official Video)</span></p>
+			</li>
+			<li data-path="content/mp3/03.mp3" data-thumbpath="content/thumbnails/small3.jpg" data-duration="03:49">
+				<p><span class="fwdmsp-artist" style="font-weight:bold; color:#E78E09;">MP3</span><span class="fwdmsp-title"> - DJ SLiiNK X DiRTY SOUTH JOE - CERTiFiED TRAP TOUR OFFiCiAL MiX</span></p>
+			</li>
+			<li data-path="https://www.youtube.com/watch?v=yUl0U7n0RoY" data-thumbpath="" data-duration="04:43">
+				<p><span class="fwdmsp-artist" style="font-weight:bold; color:#f70c3e;">YOUTUBE</span><span class="fwdmsp-title"> - RUBY feat. UZZI - Nu caut iubiri (by Carla's Dreams)</span></p>
+			</li>
+		</ul>
+		
+	</body>
+	
+</html>
+
+
+
+
