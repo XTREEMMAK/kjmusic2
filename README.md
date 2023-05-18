@@ -1,6 +1,6 @@
 # Key Jay Music
 
-This is the offical GitHub repository for the Key Jay Music website. This is also a rewrite of the original Key Jay Music website which now utilizes the new Key Jay Productions API, 11ty, and Node.js.
+This is the offical GitHub repository for the Key Jay Music website. This is also a rewrite of the original Key Jay Music website which now utilizes the new Key Jay Productions API, 11ty, Vite, and Node.js.
 <br>
 ## Site Settings
 

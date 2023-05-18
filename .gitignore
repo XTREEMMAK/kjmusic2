@@ -1,4 +1,4 @@
-/_site
-_site/**/*.html
+/src/**/*.html
+/public
 /node_modules
 .env

@@ -1,11 +1,11 @@
 import mixitup from 'mixitup';
-import {mixer , modal2} from "/src/js/module.js";
+import {mixer , modal2} from "/js/module.js";
 
 const KJMAPI = 'https://apir.keyjayproductions.com/music-projects';
 const ALBUMLIST = '?fields[0]=title&fields[1]=slug&populate[frontCover][fields]=formats&populate[mp_categories][fields][0]=type&sort[0]=releaseDate:desc';
 const ALBUMDEET = '&populate[frontCover]=*&fields=title&fields[0]=mainArtist&fields[1]=releaseDate&fields[2]=supportingArtists&fields[3]=description&&fields[4]=projectInvolvement&populate[distribution]=*&populate[credits]=*';
 
-const HOME = CDN+'/src/js/music_db/'
+const HOME = CDN+'/js/music_db/'
 const ALBUMS_HOME = HOME+'albums/';
 
 function getRecordsList (templateFile, recordsJSONFile,sortContainerID){
