@@ -1,3 +1,11 @@
+:root {
+    --headerimg_bg: url("");
+    --headerimg_4k_bg :url("");
+    --radio_bg :url("");
+    --studio_bg :url("");
+    --studio_4k_bg :url("");
+}
+
 html {
     font-size: calc(0.5em + 2.5vmin);
 }
@@ -97,7 +105,7 @@ html {
 
 .h_background::before {
     background-color: #212529;
-    background-image: url('../img/J_Header.jpg');
+    background-image: var(--headerimg_bg);
     height: 100%;
     width: 100%;
     background-position: top center;
@@ -233,7 +241,7 @@ html {
 
 .r_background::before {
     background-color: #212529;
-    background-image: url('../img/keyjayside.webp');
+    background-image: var(--radio_bg);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -268,7 +276,7 @@ html {
 
 .m_background::before {
     background-color: #212529;
-    background-image: url('../img/old_studio.jpg');
+    background-image: var(--studio_bg);
     height: 100%;
     width: 100%;
     background-position: top center;
@@ -1273,11 +1281,11 @@ iframe#About_Page {
 
 @media (min-width:2049px) {
     .m_background:before {
-        background-image: url('../img/old_studio_4k.jpg');
+        background-image: var(--studio_4k_bg);
     }
 
     .h_background:before {
-        background-image: url('../img/J_Header_5k.webp');
+        background-image: var(--headerimg_4k_bg);
         transform: scale(1.2);
         background-position: left top;
     }

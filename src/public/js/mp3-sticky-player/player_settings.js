@@ -1,4 +1,4 @@
-const host = ""; 
+const host = window.location.href.match(/^.*\//);
 const playlists = [   
     {
         genre: "STARTER",
@@ -69,7 +69,7 @@ FWDMSPUtils.onReady(function(){
             //main settings
             instanceName:"player1",
             playlistsId:"playlists",
-            mainFolderPath: "/js/mp3-sticky-player/content",
+            mainFolderPath: "./js/mp3-sticky-player/content",
             skinPath:"minimal_skin_dark",
             privatePassword:"428c841430ea18a70f7b06525d4b748a",
             soundCloudAPIKey:"",
@@ -231,4 +231,21 @@ FWDMSPUtils.onReady(function(){
             atbButtonBackgroundNormalColor:"#FFFFFF",
             atbButtonBackgroundSelectedColor:"#000000"
         });
-    });
+});
+   
+//Hero Play Button
+function showStart(){
+    let firstrundone = get_Cookie("firstrundone");
+    let el = document.querySelector('.h_play_button');
+    
+    if (firstrundone == 'true'){  
+        pgia.play(el, "PlaylistTip");
+        disableScroll();
+        set_Cookie("firstrundone",false,30);
+    }
+    window['player1'].showPlayer();
+    window['player1'].stop();
+    setTimeout(function(){ 
+    window['player1'].play(); 
+        }, 2000)   
+}
