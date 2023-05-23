@@ -25,27 +25,3 @@ jobs:
          script: |
           /var/sites/music.keyjayhd.com/deploy.sh
           echo 'Base deployment successful to Digital Ocean'
-          
-      - name: Upload to KJO Music Data Store and Sync
-        uses: play-curious/do-space-sync-action@master
-        with:
-         args: --acl public-read
-        env:
-         SOURCE_DIR: ./
-         DEST_DIR: public
-         SPACE_NAME: ${{ secrets.DO_SPACE_NAME }}
-         SPACE_REGION: ${{ secrets.DO_SPACE_REGION }}
-         SPACE_ACCESS_KEY_ID: ${{ secrets.DO_ACCESS_KEY }}
-         SPACE_SECRET_ACCESS_KEY: ${{ secrets.DO_SECRET_KEY }}
-
-      - name: Base Deployment cleanup via SSH
-        uses: appleboy/ssh-action@v0.1.4
-        id: cleanup
-        with:
-         host: ${{secrets.SSH_HOST}}
-         key: ${{secrets.SSH_KEY}}
-         username: ${{secrets.SSH_USERNAME}}
-         script_stop: true                
-         script: |
-          /var/sites/music.keyjayhd.com/cleanup.sh
-          echo 'Base deployment successfully cleaned'
