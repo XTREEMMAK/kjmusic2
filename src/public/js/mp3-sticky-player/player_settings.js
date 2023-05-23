@@ -1,4 +1,5 @@
-const host = window.location.href.match(/^.*\//);
+//const host = window.location.href.match(/^.*\//);
+const host = 'https://cdn.music.keyjayhd.com';
 const playlists = [   
     {
         genre: "STARTER",
