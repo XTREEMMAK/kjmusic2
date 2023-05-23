@@ -46,7 +46,7 @@ const playlists = [
         genre: "ATMOSPHERE",
         display_title: "ATMOSPHERE",
         playlist_type: "XML",
-        description: "Chillout and Relax to some soothing Atmosphere."
+        description: "Chillout and relax to some soothing Atmosphere."
     },
 ];
 
