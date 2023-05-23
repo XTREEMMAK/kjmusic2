@@ -54,7 +54,7 @@ var playlistHTML = '';
 
 playlists.forEach(element =>{
     playlistHTML += `
-    <li data-source="`+host+`/js/mp3-sticky-player/content/playlists/`+element.genre+`.xml" data-playlist-name="`+element.genre+`" data-thumbnail-path="`+host+`/js/mp3-sticky-player/content/playlists/thumbs/`+element.genre+`.jpg">
+    <li data-source="`+host+`/js/mp3-sticky-player/content/playlists/`+element.genre+`.xml" data-playlist-name="`+element.genre+`" data-thumbnail-path="/js/mp3-sticky-player/content/playlists/thumbs/`+element.genre+`.jpg">
                 <p class="fwdmsp-categories-title"><span class="fwdmsp-header">Title: </span><span class="fwdmsp-title">`+element.display_title+`</span></p>
                 <p class="fwdmsp-categories-type"><span class="fwdmsp-header">Type: </span>`+element.playlist_type+`</p>
                 <p class="fwdmsp-categories-description"><span class="fwdmsp-header">Description: </span>`+element.description+`</p>
