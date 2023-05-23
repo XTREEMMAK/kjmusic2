@@ -146,7 +146,7 @@ async function get_NewReleaseInfo(){
     let video_slug = nr_data.data.attributes.nr_video_slug;
     let background_url = nr_data.data.attributes.new_release_background.data.attributes.url;
 		function nr_videosection(ytslug){
-      return '<iframe src="https://www.youtube.com/embed/'+ytslug+'?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0" frameborder="0" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: auto;" allow="autoplay; encrypted-media" allowfullscreen="" ></iframe>'
+      return '<iframe src="https://www.youtube.com/embed/'+ytslug+'?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/'+ytslug+'?autoplay=0><img src=https://img.youtube.com/vi/'+ytslug+'/hqdefault.jpg alt=\'BRAND NEW KEY JAY!\'><span>▶</span></a>" frameborder="0" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: auto;" allow="autoplay; encrypted-media" allowfullscreen="" loading="lazy"></iframe>'
     }
     document.getElementById('nr_background').setAttribute("style", "background-image: url("+background_url+")");
     document.querySelector('.res_youtube_vid').innerHTML = nr_videosection(video_slug);
