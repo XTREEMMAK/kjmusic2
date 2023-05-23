@@ -18,4 +18,4 @@ Album info and Album homepage covers are now all handled by the Key Jay Producti
 
 ### **Media Player Settings**
 
-**The site's sticky media player settings can be edited within**`js/mp3-sticky-player/player_settings.js`**. You'll be able to edit the master playlist from that file. Inner playlists can be found within the**`content/playlist`**folder. Audio is referenced to the**`public/audio/[genre]`**folder within each XML playlist.**
+**The site's sticky media player settings can be edited within the public js folder at**`src/public/js/mp3-sticky-player/player_settings.js`**. You'll be able to edit the master playlist from that file. Inner playlists can be found within the**`content/playlist`**folder. Audio is referenced to the**`public/audio/[genre]`**folder within each XML playlist.**

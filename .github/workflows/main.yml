@@ -12,8 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@main
         with:
-          fetch-depth: 0
-          
+          fetch-depth: 0          
       - name: Base Deployment via SSH
         uses: appleboy/ssh-action@v0.1.4
         id: deployment
