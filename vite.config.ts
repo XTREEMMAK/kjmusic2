@@ -17,17 +17,17 @@ const files = glob.sync(path.resolve(__dirname, '_site') + '/**/*.html').reduce(
   return acc;
 }, {});
 
+export default defineConfig(({ mode }) => {
 
-export default defineConfig({
-  base: './',
-  root: 'src',
-  clearScreen: false, // This is to show Eleventy output in the console along with Vite output
-  build: {
-    outDir: '../public', // The output directory is relative to the project root, so we need to put it back one folder to work
-  },
-  
-  optimizeDeps: {
-    exclude: ['vanilla-lazyload'
-  ]
-  },
-});
+    return {
+      base: './',
+      root: 'src',
+      clearScreen: false, // This is to show Eleventy output in the console along with Vite output
+      build: {
+        outDir: '../public', // The output directory is relative to the project root, so we need to put it back one folder to work
+      },
+      optimizeDeps: {
+        exclude: ['vanilla-lazyload']
+      },
+    }
+  });

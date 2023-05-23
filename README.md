@@ -6,9 +6,8 @@ This is the offical GitHub repository for the Key Jay Music website. This is als
 
 ### Environment Swticher
 
-Almost all site settings are handled within the settings.php file.
-Here is where you'd typically modify the HOST source path for images (connecting to the CDN). I've created a switch as an environment switcher for easy modifications between development mode and production mode.
-
+This version of the site uses VITE environment variables.
+For dev, make sure to create an .env.development file with the project's root folder with VITE_CDN to the path of your choosing. For production, create a .env.production with the same variable with the path of your choosing.
 <br>
 ```
 //Environment Switcher

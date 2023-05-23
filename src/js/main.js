@@ -1,12 +1,7 @@
 import * as model from "./model.js";
 
-let PROD = import.meta.env.PROD;
-if (PROD){
-var CDN ="https://cdn.music.keyjayhd.com/public/";
-}
-else {
-var CDN = ".";
-}
+var CDN = import.meta.env.VITE_CDN;
+
 const YEAR = new Date().getFullYear();
 
 window.clearNavSelect = function(){
