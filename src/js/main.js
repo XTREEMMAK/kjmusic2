@@ -24,7 +24,6 @@ model.showFirstStartCheck();
 model.get_NewReleaseInfo();
 model.get_recordList();
 model.get_backgrounds();
-model.get_images();
 model.get_copyright(YEAR);  
 
 

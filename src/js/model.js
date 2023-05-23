@@ -206,14 +206,6 @@ let root = document.documentElement;
   root.style.setProperty('--studio_4k_bg','url("'+main.CDN+'/../img/old_studio_4k.jpg")')
 }
 
-function get_images(){
-  document.getElementById('r_spotify').src = main.CDN+"/img/radio_logos/spotify.jpg";
-  document.getElementById('r_apple').src = main.CDN+"/img/radio_logos/apple.jpg";
-  document.getElementById('r_deezer').src = main.CDN+"/img/radio_logos/deezer.jpg";
-  document.getElementById('r_tidal').src = main.CDN+"/img/radio_logos/tidal.jpg";
-  document.getElementById('r_amazon').src = main.CDN+"/img/radio_logos/amazon.jpg";
-  document.getElementById('r_ymusic').src = main.CDN+"/img/radio_logos/youtubemusic.jpg";
-}
 
 function get_copyright(year){
 var copyright = document.querySelector(".copyright");
@@ -232,6 +224,5 @@ export {
   get_NewReleaseInfo,
   get_recordList,
   get_backgrounds,
-  get_images,
   get_copyright
 }
