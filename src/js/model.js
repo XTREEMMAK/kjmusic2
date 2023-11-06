@@ -178,8 +178,8 @@ window.get_contact = function(){
 }
 
 //Production Page------------------
-window.get_support = function(){
-  window.open("https://keyayproductions.com", "_blank")
+window.get_productions_page = function(){
+  window.open("https://keyjayproductions.com", "_blank")
 //  modal.setContent(
 //      `<div class="support_modal_wrapper">
 //              <div class="sm_pic_box" style="width: 40%; margin-left: 5px; margin-right: 5px;"><img src="`+main.CDN+`/img/pc_supp_left.webp" style="width: 100%;"/></div>
