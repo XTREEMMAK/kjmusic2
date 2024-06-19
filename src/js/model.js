@@ -170,9 +170,9 @@ window.mixLink = function(key) {
 //Contact Page---------------------
 window.get_contact = function(){
   modal.setContent(
-      `<iframe src="https://forms.keyjaycompound.com/app/form?id=2lyEsw&b=0" 
+      `<iframe src="https://forms.fillout.com/t/jD3sj52DuLus" 
       style="border:0px #ffffff none;" 
-      name="KJM Contact" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="600px" width="100%" allowfullscreen>
+      name="KJM Contact" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="800px" width="100%" allowfullscreen>
       </iframe>`);
   modal.open();
 }
